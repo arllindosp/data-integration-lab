@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+data/raw/
+data/external/
+*.db
+*.sqlite*
+config/*.yaml
+config/*.json
+results/quality/*.json
+results/quality/*.txt
