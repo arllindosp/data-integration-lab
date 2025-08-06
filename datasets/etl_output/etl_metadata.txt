@@ -1,0 +1,25 @@
+
+ETL Process Information
+=======================
+Process Date: 2025-08-01 09:15:13
+Total Records Processed: 35117
+Years Included: [2023, 2024, 2025]
+Date Range: 2023-01-02 to 2025-06-04
+Source: Dados Abertos Recife - ITBI
+ETL Pipeline: Extract, Transform, Load
+
+Data Quality Metrics
+====================
+Total Columns: 29
+Records with Coordinates: 23473
+Records with SFH Financing: 11148
+Unique Neighborhoods: 98
+Unique Property Types: 19
+Data Completeness: 1.2%
+
+Business Statistics
+===================
+Average Property Value: R$ 668,034.77
+Median Property Value: R$ 360,000.00
+Average Value per m²: R$ 4,097.47
+Average Property Age: 20.3 years
