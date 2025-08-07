@@ -1,0 +1,60 @@
+version: 2
+
+# Add sources section for your raw data
+sources:
+  - name: raw_itbi
+    schema: raw_itbi
+    description: "Raw ITBI data from source database"
+    tables:
+      - name: itbi_consolidado
+        description: "Raw ITBI consolidated real estate transactions data"
+        columns:
+          - name: logradouro
+            description: "Street address"
+          - name: numero
+            description: "Street number"
+          - name: complemento
+            description: "Address complement (apartment, unit, etc.)"
+          - name: valor_avaliacao
+            description: "Property valuation amount"
+          - name: bairro
+            description: "Neighborhood"
+          - name: cidade
+            description: "City"
+          - name: uf
+            description: "State (UF)"
+          - name: ano_construcao
+            description: "Construction year"
+          - name: area_terreno
+            description: "Land area"
+          - name: area_construida
+            description: "Built area"
+          - name: fracao_ideal
+            description: "Ideal fraction"
+          - name: padrao_acabamento
+            description: "Finishing standard"
+          - name: tipo_construcao
+            description: "Construction type"
+          - name: tipo_ocupacao
+            description: "Occupation type"
+          - name: data_transacao
+            description: "Transaction date"
+          - name: estado_conservacao
+            description: "Conservation status"
+          - name: tipo_imovel
+            description: "Property type"
+          - name: sfh
+            description: "SFH indicator"
+          - name: cod_logradouro
+            description: "Street code"
+          - name: latitude
+            description: "Property latitude"
+          - name: longitude
+            description: "Property longitude"
+          - name: ano
+            description: "Year"
+
+# Your existing models
+models:
+  - name: stg_database
+    description: "Staging table for ITBI real estate transactions"
