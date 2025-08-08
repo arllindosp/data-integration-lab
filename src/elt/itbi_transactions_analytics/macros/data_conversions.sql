@@ -53,15 +53,15 @@
     end as {{ target_column }}
 {% endmacro %}
 
-{% macro convert_complemento_to_object(column_name='complemento') %}
+{% macro convert_complemento_to_object(column_name='complemento', target_column='complemento') %}
     case 
         when trim({{ column_name }}) = '' then null 
         else trim({{ column_name }})::text 
-    end as {{ column_name }}
+    end as {{target_column}}
 {% endmacro %}
 
-{% macro convert_to_category_text(column_name) %}
-    trim({{ column_name }})::text as {{ column_name }}
+{% macro convert_to_category_text(column_name, target_column) %}
+    trim({{ column_name }})::text as {{ target_column}}
 {% endmacro %}
 
 {% macro remove_redundant_geographic_columns() %}
