@@ -1,4 +1,15 @@
 version: 2
+
 models:
-  - name: dimLocation
+  - name: dim_localizacao
     description: "Dimension table for locations"
+  - name: dim_tempo
+    description: "Dimension table for time"
+  - name: dim_imovel
+    description: "Dimension table for properties"
+  - name: dim_construcao
+    description: "Dimension table for constructions"
+  - name: dim_comercial
+    description: "Dimension table for values and financial aspects"
+  - name: fact_table
+    description: "Fact table for ITBI transactions"

@@ -20,5 +20,8 @@
  {{ convert_valores_financiados_sfh_from_source('sfh', 'valores_financiados_sfh') }},
  {{ convert_data_transacao_to_timestamp('data_transacao') }},
  ano::integer as ano,
- current_timestamp as loaded_at
+ current_timestamp as loaded_at,
+{{ convert_to_category_text('lixo_organico', 'lixo_organico') }},
+{{ convert_to_category_text('quantidade_pavimentos', 'quantidade_pavimentos')}}
+
 {% endmacro %}
