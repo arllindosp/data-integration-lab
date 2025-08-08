@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: dimLocation
+    description: "Dimension table for locations"
