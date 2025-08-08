@@ -22,5 +22,6 @@ cleaned_tipo_ocupacao AS (
     FROM cleaned_tipo_construcao
 )
 SELECT 
-    {{ apply_all_conversion_transformations() }}
+    {{ apply_all_conversion_transformations() }},
+    ROW_NUMBER() OVER (ORDER BY (SELECT 1)) AS id_transacao
 FROM cleaned_tipo_ocupacao

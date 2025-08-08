@@ -37,4 +37,4 @@ models:
       +schema: staging
     warehouse:
       +materialized: table
-      +schema: analytics
+      +schema: warehouse

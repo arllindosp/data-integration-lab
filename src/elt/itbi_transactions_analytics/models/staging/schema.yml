@@ -57,4 +57,5 @@ sources:
 # Your existing models
 models:
   - name: stg_database
+    schema: staging
     description: "Staging table for ITBI real estate transactions"
