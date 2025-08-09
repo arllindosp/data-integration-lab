@@ -63,7 +63,7 @@ data-integration-lab/
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="50" height="50"/>
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F431111%2Fdbt&psig=AOvVaw3gVVWnqbQZv-vBuU-R_9GX&ust=1754820687444000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiRg6-7-I4DFQAAAAAdAAAAABAE" alt="dbt" width="50" height="50"/>
+  <img src="https://cdn.prod.website-files.com/6541750d4db1a741ed66738c/670efd7e9a4ca007d0cad67d_dbt_core.png" alt="dbt" width="50" height="50"/>
   <img src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png" alt="SQL" width="50" height="50"/>
   <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn" width="50" height="50"/>
 </div>
@@ -384,6 +384,7 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da UFPE
 Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
 ---
+
 
 
 
