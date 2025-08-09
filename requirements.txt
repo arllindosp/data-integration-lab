@@ -1,0 +1,64 @@
+# Data Integration Lab - ITBI Recife
+# Requirements for project execution
+# Execute this in the root directory: pip install -r requirements.txt
+
+# Core Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.7  # Use psycopg2 if on Windows with PostgreSQL installed
+
+# Data Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Jupyter Environment
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipykernel>=6.0.0
+
+# Database Connectivity
+psycopg2>=2.9.7  # PostgreSQL driver
+sqlalchemy-utils>=0.41.0
+
+# Data Manipulation & ETL
+dbt-postgres>=1.5.0  # DBT with PostgreSQL adapter
+dbt-core>=1.5.0
+
+# File Handling
+openpyxl>=3.1.0  # Excel support
+zipfile36>=0.1.0  # For handling zip files
+
+# Utilities
+python-dotenv>=1.0.0  # Environment variable management
+tqdm>=4.66.0  # Progress bars
+
+# Type Checking
+typing-extensions>=4.7.0
+
+# Data Quality
+great_expectations>=0.17.0
+
+# Documentation
+mkdocs>=1.5.0  # For generating documentation
+
+# IMPORTANT NOTES:
+# 1. For ELT pipeline: Ensure PostgreSQL server is running before execution
+# 2. For dbt: 
+#    a. Navigate to src/elt/itbi_transactions_analytics/ directory:
+#       cd src/elt/itbi_transactions_analytics
+#    b. Install dbt specifically in this directory:
+#       pip install dbt-core dbt-postgres
+#    c. Initialize dbt project (if not already done):
+#       dbt init
+#    d. Run dbt commands from this directory:
+#       dbt run
+#       dbt test
+#       dbt docs generate
+# 3. For notebooks: Ensure kernel environment has these dependencies installed
+# 4. For Windows users: You might need to install psycopg2 instead of psycopg2-binary
+#    (pip install psycopg2)
+# 5. Create a virtual environment before installing:
+#    python -m venv .venv
+#    .venv\Scripts\activate (Windows)
+#    source .venv/bin/activate (Linux/Mac)
