@@ -1,0 +1,84 @@
+{
+  "cabecalho": {
+    "descricao": "Este dicionário de dados descreve o modelo estrela utilizado para análise de transações imobiliárias do Recife. Os datasets são compostos por tabelas de dimensão e fato, permitindo análises detalhadas sobre localização, tempo, características do imóvel, aspectos comerciais e construção. Cada dimensão representa um aspecto relevante para a análise, enquanto a tabela fato centraliza os eventos de transação, conectando todas as dimensões por meio de chaves estrangeiras."
+  },
+  "modelo_estrela": {
+    "dimensoes": [
+      {
+        "nome": "dimLocation",
+        "descricao": "Tabela de dimensão para localização dos imóveis",
+        "campos": [
+          {"nome": "cod_logradouro", "descricao": "Código do logradouro", "tipo": "Int"},
+          {"nome": "numero", "descricao": "Número do imóvel", "tipo": "Int"},
+          {"nome": "complemento", "descricao": "Complemento do endereço (apto, bloco, etc.)", "tipo": "Varchar"},
+          {"nome": "bairro", "descricao": "Bairro do imóvel", "tipo": "Varchar"},
+          {"nome": "latitude", "descricao": "Latitude do imóvel", "tipo": "Real"},
+          {"nome": "longitude", "descricao": "Longitude do imóvel", "tipo": "Real"},
+          {"nome": "logradouro", "descricao": "Nome do logradouro", "tipo": "Varchar"}
+        ]
+      },
+      {
+        "nome": "dim_temp",
+        "descricao": "Tabela de dimensão temporal das transações",
+        "campos": [
+          {"nome": "data_transacao", "descricao": "Data da transação imobiliária", "tipo": "Timestamp"},
+          {"nome": "ano", "descricao": "Ano da transação", "tipo": "Int"},
+          {"nome": "mes", "descricao": "Mês da transação", "tipo": "Int"},
+          {"nome": "trimestre", "descricao": "Trimestre da transação", "tipo": "Int"},
+          {"nome": "dia_semana", "descricao": "Dia da semana da transação", "tipo": "Int"},
+          {"nome": "dia", "descricao": "Dia do mês da transação", "tipo": "Int"},
+          {"nome": "nome_mes", "descricao": "Nome do mês da transação", "tipo": "Varchar"},
+          {"nome": "nome_dia_semana", "descricao": "Nome do dia da semana da transação", "tipo": "Varchar"}
+        ]
+      },
+      {
+        "nome": "dim_comercial",
+        "descricao": "Tabela de dimensão comercial das transações",
+        "campos": [
+          {"nome": "id", "descricao": "Identificador da dimensão comercial", "tipo": "Int"},
+          {"nome": "valor_avaliacao", "descricao": "Valor de avaliação do imóvel", "tipo": "Real"},
+          {"nome": "valores_financiados_sfh", "descricao": "Valores financiados pelo SFH", "tipo": "Real"},
+          {"nome": "valor_itbi", "descricao": "Valor do ITBI da transação", "tipo": "Real"}
+        ]
+      },
+      {
+        "nome": "dim_construcao",
+        "descricao": "Tabela de dimensão de características da construção",
+        "campos": [
+          {"nome": "id", "descricao": "Identificador da dimensão construção", "tipo": "Int"},
+          {"nome": "tipo_construcao", "descricao": "Tipo de construção do imóvel", "tipo": "Varchar"},
+          {"nome": "padrao_acabamento", "descricao": "Padrão de acabamento do imóvel", "tipo": "Varchar"},
+          {"nome": "estado_conservacao", "descricao": "Estado de conservação do imóvel", "tipo": "Varchar"},
+          {"nome": "quantidade_paviment", "descricao": "Quantidade de pavimentos do imóvel", "tipo": "Varchar"},
+          {"nome": "area_terreno", "descricao": "Área do terreno do imóvel", "tipo": "Real"},
+          {"nome": "area_construida", "descricao": "Área construída do imóvel", "tipo": "Real"},
+          {"nome": "fracao_ideal", "descricao": "Parte ideal que o imóvel representa em relação ao todo do terreno ou edifício", "tipo": "Real"}
+        ]
+      },
+      {
+        "nome": "dim_imovel",
+        "descricao": "Tabela de dimensão de tipo e ocupação do imóvel",
+        "campos": [
+          {"nome": "id", "descricao": "Identificador da dimensão imóvel", "tipo": "Int"},
+          {"nome": "tipo_imovel", "descricao": "Tipo de imóvel (apartamento, casa, etc.)", "tipo": "Varchar"},
+          {"nome": "tipo_ocupacao", "descricao": "Tipo de ocupação do imóvel (residencial, comercial, etc.)", "tipo": "Varchar"},
+          {"nome": "lixo_organico", "descricao": "Indicador de coleta de lixo orgânico", "tipo": "Varchar"}
+        ]
+      }
+    ],
+    "fato": {
+      "nome": "fact_transactions",
+      "descricao": "Tabela fato das transações imobiliárias",
+      "campos": [
+        {"nome": "id", "descricao": "Identificador da transação", "tipo": "Int"},
+        {"nome": "codigo_logradouro", "descricao": "Código do logradouro", "tipo": "Int"},
+        {"nome": "numero", "descricao": "Número do imóvel", "tipo": "Int"},
+        {"nome": "complemento", "descricao": "Complemento do endereço", "tipo": "Varchar"},
+        {"nome": "data_transacao", "descricao": "Data da transação", "tipo": "Timestamp"},
+        {"nome": "construcao_id", "descricao": "Chave estrangeira para a dimensão construção", "tipo": "Int"},
+        {"nome": "imovel_id", "descricao": "Chave estrangeira para a dimensão imóvel", "tipo": "Int"},
+        {"nome": "comercial_id", "descricao": "Chave estrangeira para a dimensão comercial", "tipo": "Int"}
+      ]
+    }
+  }
+}
