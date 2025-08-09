@@ -24,7 +24,7 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da Univ
 Esta análise identifica os bairros com maior participação no mercado imobiliário, considerando o número de transações e valores de avaliação.
 
 
-![Gráfico de pizza mostrando a participação percentual de mercado por bairro](datasets/etl_output/summaries/market_share_by_neighborhood.png)
+![Gráfico de pizza mostrando a participação percentual de mercado por bairro](analise_1.png)
 
 ### 📈 Análise 2: Sazonalidade de Vendas
 
@@ -392,5 +392,6 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da UFPE
 Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
 ---
+
 
 
