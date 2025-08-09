@@ -131,22 +131,25 @@ data-integration-lab/
    
    **Adicione o seguinte conteúdo ao profiles.yml**:
    ```yaml
-   itbi_transactions_analytics:
+   itbi_transactions_analytics:  # IMPORTANTE: Este nome deve corresponder exatamente ao nome do projeto dbt
      target: dev
      outputs:
        dev:
          type: postgres
-         host: localhost
-         user: postgres
-         password: etlpipeline3974
-         port: 5432
-         dbname: elt_pipeline
-         schema: analytics
+         host: localhost         # Ajuste conforme seu ambiente
+         user: seu_usuario       # Ajuste conforme seu ambiente
+         password: sua_senha     # Ajuste conforme seu ambiente
+         port: 5432              # Ajuste conforme seu ambiente
+         dbname: seu_banco       # Ajuste conforme seu ambiente
+         schema: analytics       # IMPORTANTE: Este schema deve ser mantido como "analytics"
          threads: 4
          keepalives_idle: 0
    ```
    
-   > 🔑 **IMPORTANTE**: Certifique-se de ajustar o nome de usuário, senha, porta e outros detalhes conforme necessário para sua instalação do PostgreSQL.
+   > 🔑 **IMPORTANTE**: 
+   > - O nome do perfil `itbi_transactions_analytics` deve ser mantido exatamente como está
+   > - O schema `analytics` deve ser mantido exatamente como está
+   > - Os demais valores (host, user, password, port, dbname) podem e devem ser ajustados conforme sua instalação do PostgreSQL
 
 6. **Instalação de pacotes para notebooks ETL/ELT (caso ocorra problemas)**
    ```sh
