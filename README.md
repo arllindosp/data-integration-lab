@@ -2,7 +2,9 @@
 
 ## 🎓 Contextualização do Projeto
 
-Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da Universidade Federal de Pernambuco (UFPE). O objetivo é consolidar, transformar e modelar dados de transações imobiliárias (ITBI) do município de Recife, abrangendo os---
+Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da Universidade Federal de Pernambuco (UFPE). O objetivo é consolidar, transformar e modelar dados de transações imobiliárias do município de Recife, abrangendo os anos de 2023 a 2025, para análises multidimensionais e geração de insights estratégicos. O **ITBI** (Imposto sobre a Transmissão de Bens Imóveis) é um tributo municipal brasileiro que incide sobre a transferência onerosa de propriedades imobiliárias, sendo cobrado em operações como compra e venda de imóveis, permuta (troca) de propriedades, dação em pagamento, arrematações em leilões e transferências de direitos reais sobre imóveis. Em Recife, a alíquota é de 2% sobre o valor venal do imóvel ou o valor da transação, prevalecendo o maior.
+
+Os dados públicos do ITBI são extremamente valiosos para diversos setores, incluindo o mercado imobiliário (análise de tendências de preços e volumes), planejamento urbano (identificação de áreas de valorização), formulação de políticas públicas (decisões sobre infraestrutura), pesquisa acadêmica (estudos socioeconômicos) e setor financeiro (avaliação de investimentos). Este projeto utiliza um conjunto de dados disponibilizado pela Prefeitura do Recife através do portal de dados abertos, proporcionando uma oportunidade para aplicar técnicas de integração, modelagem e análise de dados em um contexto real e relevante.
 
 
 
@@ -388,6 +390,7 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da UFPE
 Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
 ---
+
 
 
 
