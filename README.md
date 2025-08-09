@@ -110,7 +110,45 @@ data-integration-lab/
    
    > ⚠️ **ATENÇÃO**: Todos os comandos dbt (dbt run, dbt test, etc.) DEVEM ser executados dentro do diretório `src/elt/itbi_transactions_analytics`. Caso contrário, o projeto dbt não funcionará corretamente.
 
-5. **Instalação de pacotes para notebooks ETL/ELT (caso ocorra problemas)**
+5. **Configuração do arquivo profiles.yml do dbt**
+   
+   É necessário configurar o arquivo `profiles.yml` do dbt para a conexão com o banco de dados.
+   
+   **No Linux/Mac**:
+   ```sh
+   # Edite o arquivo
+   nano ~/.dbt/profiles.yml
+   ```
+   
+   **No Windows**:
+   ```sh
+   # O arquivo deve estar em:
+   C:\Users\SEU_USUARIO\.dbt\profiles.yml
+   
+   # Você pode abrir com o Notepad:
+   notepad %USERPROFILE%\.dbt\profiles.yml
+   ```
+   
+   **Adicione o seguinte conteúdo ao profiles.yml**:
+   ```yaml
+   itbi_transactions_analytics:
+     target: dev
+     outputs:
+       dev:
+         type: postgres
+         host: localhost
+         user: postgres
+         password: etlpipeline3974
+         port: 5432
+         dbname: elt_pipeline
+         schema: analytics
+         threads: 4
+         keepalives_idle: 0
+   ```
+   
+   > 🔑 **IMPORTANTE**: Certifique-se de ajustar o nome de usuário, senha, porta e outros detalhes conforme necessário para sua instalação do PostgreSQL.
+
+6. **Instalação de pacotes para notebooks ETL/ELT (caso ocorra problemas)**
    ```sh
    # Para o notebook ETL
    cd src/etl
@@ -124,11 +162,11 @@ data-integration-lab/
    cd ../../
    ```
 
-6. **Configure o PostgreSQL**
+7. **Configure o PostgreSQL**
    - Crie um banco de dados chamado `elt_pipeline`
    - Ajuste as credenciais no arquivo `config.json` conforme seu ambiente
 
-6. **Execute o pipeline**
+8. **Execute o pipeline**
    - **Para análise ETL**: 
      ```sh
      # Basta executar o notebook ETL
@@ -147,7 +185,7 @@ data-integration-lab/
      ```
      **IMPORTANTE**: Os comandos dbt DEVEM ser executados dentro do diretório `itbi_transactions_analytics`
 
-7. **Visualize os dados**
+9. **Visualize os dados**
    - Conecte o banco ao Power BI ou Metabase para dashboards
 
 ---
@@ -162,9 +200,9 @@ A modelagem estrela foi adotada para facilitar análises sistemáticas. Ela cons
 - **dim_imovel**: tipo_imovel, padrao_acabamento, estado_conservacao
 - **dim_comercial**: valor_avaliacao, valor_transacao, valor_financiado, itbi_calculado
 
-> ### Diagrama:
->
-> ![Inserir aqui: itbi-star-schema-2025-08-08_11-29.png](src/etl/itbi-star-schema-2025-08-08_11-29.png)
+### Diagrama:
+
+![Diagrama do modelo estrela](src/etl/itbi-star-schema-2025-08-08_11-29.png)
 
 ---
 
@@ -176,8 +214,8 @@ O processo ETL tradicional segue as etapas:
 2. **Transform**: Limpeza, padronização, normalização e enriquecimento dos dados
 3. **Load**: Carga dos dados tratados no banco PostgreSQL
 
-> ### Diagrama
-> > ![Fluxo_etl](etl_flow.png)
+### Diagrama
+![Fluxo ETL](etl_flow.png)
 
 ---
 
@@ -189,8 +227,8 @@ O processo ELT adotado neste projeto segue:
 2. **Load**: Carga dos dados brutos no banco PostgreSQL
 3. **Transform**: Transformações e modelagem realizadas diretamente no banco, utilizando dbt e macros SQL
 
-> ### Diagrama
-> > ![Fluxo_elt](elt_flow.png)
+### Diagrama
+![Fluxo ELT](elt_flow.png)
 
 
 ---
@@ -307,4 +345,4 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LIC
 
 ---
 
-**Preencha os espaços reservados com as imagens dos diagramas e fluxos conforme necessário.**
+
