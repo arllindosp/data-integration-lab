@@ -2,7 +2,52 @@
 
 ## 🎓 Contextualização do Projeto
 
-Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da Universidade Federal de Pernambuco (UFPE). O objetivo é consolidar, transformar e modelar dados de transações imobiliárias (ITBI) do município de Recife, abrangendo os anos de 2023 a 2025, para análises multidimensionais e geração de insights.
+Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da Universidade Federal de Pernambuco (UFPE). O objetivo é consolidar, transformar e modelar dados de transações imobiliárias (ITBI) do município de Recife, abrangendo os---
+
+## 📊 Análises e Insights
+
+### 🔍 Questões de Negócio Abordadas
+
+- Quais localizações (bairros, distritos) apresentam os maiores valores de propriedade e volumes de transação?
+- Como os imóveis comerciais vs. residenciais se comportam em diferentes áreas?
+- Quais são os padrões sazonais nas transações imobiliárias?
+
+### 📏 Métricas-Chave e KPIs
+
+- **Valores Médios de Propriedade por Localização**: AVG(valor_avaliacao) agrupado por atributos de dim_localizacao
+- **Tendências de Volume de Transações**: Contagem de transações por dim_tempo (mensal, trimestral, anual)
+- **Distribuição Geográfica de Receita**: SUM(valores_financiados_sfh) por bairro e distrito
+- **Desempenho por Tipo de Propriedade**: Comparações de valor comercial vs. residencial usando dim_comercial e características das propriedades
+
+### 📈 Análise 1: Participação de Mercado por Bairro
+
+Esta análise identifica os bairros com maior participação no mercado imobiliário, considerando o número de transações e valores de avaliação.
+
+
+![Gráfico de pizza mostrando a participação percentual de mercado por bairro](datasets/etl_output/summaries/market_share_by_neighborhood.png)
+
+### 📈 Análise 2: Sazonalidade de Vendas
+
+Esta análise identifica o mês com maior valor de mercado para cada ano, revelando padrões sazonais nas transações imobiliárias.
+
+
+![Gráfico de barras mostrando o mês de maior venda por ano](datasets/etl_output/summaries/top_month_by_year.png)
+
+### 📈 Análise 3: Idade Média por Tipo de Imóvel
+
+Esta análise compara a idade média dos diferentes tipos de imóveis transacionados, oferecendo insights sobre o estoque imobiliário da cidade.
+
+![Gráfico de barras mostrando o ano de construção médio por tipo de imóvel](datasets/etl_output/summaries/avg_construction_year.png)
+
+### 💡 Principais Insights
+
+1. **Concentração Geográfica**: Os dados revelam uma alta concentração de transações imobiliárias em poucos bairros premium, indicando potencial para desenvolvimento em áreas emergentes.
+
+2. **Sazonalidade**: Existe um padrão sazonal claro nas transações, com picos em meses específicos de cada ano, possivelmente relacionados a fatores econômicos ou ciclos de negócios.
+
+3. **Perfil dos Imóveis**: A idade média varia significativamente entre os diferentes tipos de imóveis, com algumas categorias apresentando um estoque mais antigo que pode indicar oportunidades de renovação urbana.
+
+---e 2023 a 2025, para análises multidimensionais e geração de insights.
 
 O ITBI (Imposto de Transmissão de Bens Imóveis) é um tributo municipal cobrado sobre a transferência de imóveis. Os dados públicos do ITBI são fundamentais para estudos de mercado, políticas urbanas e análises financeiras.
 
