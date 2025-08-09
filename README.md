@@ -366,13 +366,7 @@ Esta análise compara a idade média dos diferentes tipos de imóveis transacion
 
 3. **Perfil dos Imóveis**: A idade média varia significativamente entre os diferentes tipos de imóveis, com algumas categorias apresentando um estoque mais antigo que pode indicar oportunidades de renovação urbana.
 
----e 2023 a 2025, para análises multidimensionais e geração de insights.
-
-O ITBI (Imposto de Transmissão de Bens Imóveis) é um tributo municipal cobrado sobre a transferência de imóveis. Os dados públicos do ITBI são fundamentais para estudos de mercado, políticas urbanas e análises financeiras.
-
----
-
-## �📚 Referências e Recursos
+## 📚 Referências e Recursos
 
 - [Documentação dbt](https://docs.getdbt.com/docs/introduction)
 - [Dados Abertos Recife](http://dados.recife.pe.gov.br/)
@@ -390,6 +384,7 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da UFPE
 Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
 ---
+
 
 
 
