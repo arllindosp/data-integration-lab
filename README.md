@@ -354,7 +354,7 @@ Esta análise identifica o mês com maior valor de mercado para cada ano, revela
 
 Esta análise compara a idade média dos diferentes tipos de imóveis transacionados, oferecendo insights sobre o estoque imobiliário da cidade.
 
-![Gráfico de barras mostrando o ano de construção médio por tipo de imóvel](analise_2.png)
+![Gráfico de barras mostrando o ano de construção médio por tipo de imóvel](analise_3.png)
 
 ### 💡 Principais Insights
 
@@ -388,6 +388,7 @@ Este projeto foi desenvolvido para a disciplina de Banco de Dados 2025.1 da UFPE
 Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo LICENSE para detalhes.
 
 ---
+
 
 
 
